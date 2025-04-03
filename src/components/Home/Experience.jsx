@@ -42,14 +42,14 @@ const experienceData = [
         description: 'Monitoring and maintaining cathodic protection systems, conducting site assessments, and ensuring compliance with safety standards.',
         skills: ['Electrical Engineering', 'SCADA', 'Cathodic Protection'],
     },
-    {
-        title: 'Electrical Design Engineer - Oil & Gas',
-        company: 'Sombansi Enviro Engg Pvt Ltd',
-        duration: 'Jul 2021 - Feb 2023',
-        location: 'Uttar Pradesh, India · On-site',
-        description: 'Designed electrical systems, conducted site surveys, and prepared design documentation for various projects.',
-        skills: ['Cathodic Protection', 'Electrical Troubleshooting'],
-    },
+    // {
+    //     title: 'Electrical Design Engineer - Oil & Gas',
+    //     company: 'Sombansi Enviro Engg Pvt Ltd',
+    //     duration: 'Jul 2021 - Feb 2023',
+    //     location: 'Uttar Pradesh, India · On-site',
+    //     description: 'Designed electrical systems, conducted site surveys, and prepared design documentation for various projects.',
+    //     skills: ['Cathodic Protection', 'Electrical Troubleshooting'],
+    // },
     {
         title: 'Subject Matter Expert',
         company: 'Chegg India',
@@ -86,17 +86,17 @@ const educationData = [
 
 // Certifications data
 const certificationsData = [
-    'Certified Python Developer',
-    'Full Stack Development Certification',
-    'Bootcamp | React | Full Stack Development - Coding Ninjas (Issued Aug 2024, Expires Feb 2025)',
-    'Bootcamp | Back End with Node.js | Full Stack Development - Coding Ninjas (Issued Jul 2024, Expired Aug 2024)',
-    'Ford - EV Engineering Advanced Job Simulation - Forage (Issued Apr 2024)',
-    'Introduction to Programming Using Python - Great Learning (Issued Mar 2024)',
+    // 'Certified Python Developer',
+    // 'Full Stack Development Certification',
+    // 'Bootcamp | React | Full Stack Development - Coding Ninjas (Issued Aug 2024, Expires Feb 2025)',
+    // 'Bootcamp | Back End with Node.js | Full Stack Development - Coding Ninjas (Issued Jul 2024, Expired Aug 2024)',
+    // 'Ford - EV Engineering Advanced Job Simulation - Forage (Issued Apr 2024)',
+    // 'Introduction to Programming Using Python - Great Learning (Issued Mar 2024)',
     'Bootcamp | Back End with Node.js | Full Stack Development - Coding Ninjas (Issued Feb 2024, Expired Jul 2024)',
     'Bootcamp | Front End | Full Stack Development - Coding Ninjas (Issued Jan 2024, Expired Apr 2024)',
     'Bootcamp | React | Full Stack Development - Coding Ninjas (Issued Aug 2023, Expired Feb 2024)',
-    'Python Machine Learning - TEACHNOOK (Issued Feb 2023)',
-    'Transformer - Tata Steel (Issued May 2020)',
+    // 'Python Machine Learning - TEACHNOOK (Issued Feb 2023)',
+    // 'Transformer - Tata Steel (Issued May 2020)',
     'Machine Learning Engineer - TEACHNOOK (Issued Jan 2023, Expired Apr 2023)',
 ];
 
