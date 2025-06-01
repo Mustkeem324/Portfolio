@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaYoutube , FaMapMarkerAlt} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 // Constants
