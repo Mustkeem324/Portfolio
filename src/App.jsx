@@ -1,37 +1,78 @@
+import React from "react";
+import { motion } from "framer-motion";
 import Contact from "./components/Home/Contact";
 import Hero from "./components/Home/Hero";
 import Projects from "./components/Home/Projects";
 import Technologies from "./components/Home/Technologies";
 import Nav from "./components/Nav/Nav";
-import TelegramChannel  from "./components/Home/TelegramChannel";
 import Footer from "./components/Home/Footer";
-import SupportMessage from "./components/Home/SupportMessage";
 import Experience from "./components/Home/Experience";
-import TelegramEmbedWrapper from "./components/Home/TelegramEmbedWrapper";
+import TelegramChannel from "./components/Home/TelegramChannel"; // Placeholder
+import TelegramEmbedWrapper from "./components/Home/TelegramEmbedWrapper"; // Placeholder
+import SupportMessage from "./components/Home/SupportMessage"; // Placeholder
+
+// Animation Variants
+const appVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function App() {
   return (
-    <>
-      <div className="overflow-x-hidden text-stone-300 antialiased">
-        <div className="fixed inset-0 -z-10">
-          <div class="relative h-full w-full bg-black">
-            <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-            <div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
-          </div>
-        </div>
-        <div className="container mx-auto px-8">
-          <Nav />
+    <motion.div
+      variants={appVariants}
+      initial="hidden"
+      animate="visible"
+      className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white antialiased"
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Nav />
+        <motion.section variants={sectionVariants}>
           <Hero />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <Technologies />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <Experience />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <Projects />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <TelegramChannel />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <TelegramEmbedWrapper />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
           <Contact />
-          <Footer/>
-          <SupportMessage/>
-        </div>
+        </motion.section>
+        <motion.section variants={sectionVariants}>
+          <Footer />
+        </motion.section>
+        <motion.section variants={sectionVariants}>
+          <SupportMessage />
+        </motion.section>
       </div>
-    </>
+    </motion.div>
   );
 }
