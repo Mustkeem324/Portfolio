@@ -224,7 +224,7 @@ export default function App() {
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="hero-portrait-card">
             <div className="portrait-status"><span>FOUNDER / ENGINEER</span><span className="live-dot">ACTIVE</span></div>
             <div className="portrait-frame">
-              <img src="/mustkeem-ahmad.png" alt="Mustkeem Ahmad" />
+              <img src="https://raw.githubusercontent.com/Mustkeem324/Portfolio/main/mustkeem-ahmad.png" alt="Mustkeem Ahmad" />
             </div>
             <div className="portrait-copy">
               <h3>Mustkeem Ahmad</h3>
