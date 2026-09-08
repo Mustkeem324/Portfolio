@@ -20,31 +20,32 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { HiOutlineMail } from "react-icons/hi";
 
 const profile = {
-  role: "AI Engineer · Generative AI · LLM Evaluation · Full-Stack Development",
+  role: "Founder · AI Engineer · Full-Stack Developer · LLM Evaluation",
   email: "mustkeem324@gmail.com",
   github: "https://github.com/Mustkeem324",
   freelance: "https://freelancekar.com",
 };
 
 const stats = [
+  ["Founder", "FreelanceKar.com"],
   ["200+", "Projects delivered"],
   ["5+ yrs", "AI / engineering"],
-  ["3", "Active workstreams"],
   ["8.90", "MBA CGPA"],
 ];
 
 const experience = [
   {
+    company: "FreelanceKar.com",
+    role: "Founder & AI / Full-Stack Consultant",
+    period: "Mar 2021 — Present",
+    text: "Founded and built FreelanceKar.com while delivering 200+ client and independent projects across AI agents, API engineering, automation, cloud deployment and full-stack products.",
+    highlight: true,
+  },
+  {
     company: "Handshake · Project Dynamo",
     role: "AI Trainer / LLM Evaluation Contributor",
     period: "Feb 2026 — Present",
     text: "Evaluate model outputs for reasoning, instruction following, relevance and quality, with structured evidence-based feedback in high-quality AI training workflows.",
-  },
-  {
-    company: "FreelanceKar.com",
-    role: "Founder & AI / Full-Stack Consultant",
-    period: "Mar 2021 — Present",
-    text: "Delivered 200+ client and independent projects across AI agents, API engineering, automation, cloud deployment and full-stack products from discovery through launch.",
   },
   {
     company: "Outlier AI",
@@ -57,6 +58,30 @@ const experience = [
     role: "Lead — Full Stack & AI Innovation",
     period: "Oct 2025 — Feb 2026",
     text: "Worked with leadership on architecture and delivery of AI-enabled platforms combining LLMs, automation pipelines, APIs and cloud services across AWS and Azure.",
+  },
+];
+
+const flagshipProjects = [
+  {
+    title: "FreelanceKar.com",
+    label: "Founder / Product",
+    description: "A freelancing and digital-work platform I founded, combining product strategy, full-stack engineering and real-world marketplace workflows.",
+    stack: ["Founder", "Product", "Full Stack", "Platform"],
+    live: "https://freelancekar.com",
+  },
+  {
+    title: "CampusOS / NAVEMORA",
+    label: "Flagship Engineering",
+    description: "Enterprise multi-tenant higher-education operating system with campus ERP, LMS, workforce OS, registration, finance, identity, access and real-time institutional workflows.",
+    stack: ["Next.js", "TypeScript", "Prisma", "Multi-Tenant"],
+    github: "https://github.com/Mustkeem324/campusos",
+  },
+  {
+    title: "Noor Quran",
+    label: "Live Product",
+    description: "A comprehensive Islamic companion for Quran reading, learning, memorization, daily dhikr, hadith, prayer tools, reflection, community and structured learning journeys.",
+    stack: ["Quran", "Learning", "AI Features", "Live Platform"],
+    live: "https://noorquran.in/",
   },
 ];
 
@@ -167,6 +192,7 @@ export default function App() {
           <span>Mustkeem Ahmad</span>
         </a>
         <nav>
+          <a href="#flagship">Flagship</a>
           <a href="#work">Work</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
@@ -180,27 +206,32 @@ export default function App() {
       <main id="top">
         <section className="hero section-pad">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="hero-copy">
-            <div className="availability"><span /> Available for AI & full-stack opportunities</div>
+            <div className="availability"><span /> Founder of FreelanceKar.com · Open to AI & engineering opportunities</div>
             <p className="kicker">{profile.role}</p>
-            <h1>I build <span>AI-powered products</span>, scalable systems and intelligent automation.</h1>
-            <p className="hero-text">AI engineer and full-stack developer working across LLM evaluation, AI training, prompt engineering, automation, APIs, cloud systems and production web applications.</p>
+            <h1>I build <span>AI-powered products</span>, scalable systems and real platforms people can use.</h1>
+            <p className="hero-text">Founder of FreelanceKar.com and an AI/full-stack engineer working across LLM evaluation, intelligent automation, APIs, cloud systems and production web applications.</p>
             <div className="hero-actions">
-              <a className="primary-btn" href="#work">Explore selected work <FaArrowRight /></a>
+              <a className="primary-btn" href="#flagship">See flagship products <FaArrowRight /></a>
               <a className="secondary-btn" href={`mailto:${profile.email}`}>Let’s talk <HiOutlineMail /></a>
             </div>
             <div className="social-row">
               <a href={profile.github} target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
               <a href={profile.freelance} target="_blank" rel="noreferrer">FreelanceKar <HiArrowUpRight /></a>
+              <a href="https://noorquran.in/" target="_blank" rel="noreferrer">Noor Quran <HiArrowUpRight /></a>
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="hero-panel">
-            <div className="panel-top"><span>Engineering profile</span><span className="live-dot">LIVE</span></div>
-            <div className="monogram">MA</div>
-            <h3>Building from architecture to deployment.</h3>
-            <p>Generative AI · LLM evaluation · Full-stack systems · API engineering · Automation · Cloud</p>
-            <div className="tech-orbit">
-              {techIcons.map((Icon, index) => <span key={index}><Icon /></span>)}
+          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="hero-portrait-card">
+            <div className="portrait-status"><span>FOUNDER / ENGINEER</span><span className="live-dot">ACTIVE</span></div>
+            <div className="portrait-frame">
+              <img src="/mustkeem-ahmad.png" alt="Mustkeem Ahmad" />
+            </div>
+            <div className="portrait-copy">
+              <h3>Mustkeem Ahmad</h3>
+              <p>Founder, product builder and AI engineer shipping ambitious systems from concept to deployment.</p>
+              <div className="tech-orbit">
+                {techIcons.map((Icon, index) => <span key={index}><Icon /></span>)}
+              </div>
             </div>
           </motion.div>
         </section>
@@ -209,8 +240,27 @@ export default function App() {
           {stats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}
         </section>
 
+        <section className="section-pad flagship-section" id="flagship">
+          <SectionTitle eyebrow="Flagship products" title="The work I want recruiters and clients to notice first." copy="Three high-signal products that show founder mindset, full-stack depth, product ownership and the ability to ship real platforms." />
+          <div className="flagship-grid">
+            {flagshipProjects.map((project, index) => (
+              <motion.article key={project.title} className="flagship-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }}>
+                <div className="flagship-index">0{index + 1}</div>
+                <span className="flagship-label">{project.label}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tag-row">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                <div className="flagship-actions">
+                  {project.live && <a href={project.live} target="_blank" rel="noreferrer">Visit live <HiArrowUpRight /></a>}
+                  {project.github && <a href={project.github} target="_blank" rel="noreferrer"><FaGithub /> View repository <HiArrowUpRight /></a>}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </section>
+
         <section className="section-pad" id="work">
-          <SectionTitle eyebrow="Selected engineering work" title="Projects that show range, not just volume." copy="A curated set from a much larger GitHub portfolio across AI, full-stack products, backend APIs, automation and data tooling." />
+          <SectionTitle eyebrow="More engineering work" title="Projects that show range, not just volume." copy="A curated set from a much larger GitHub portfolio across AI, full-stack products, backend APIs, automation and data tooling." />
           <div className="filters">
             {categories.map((category) => <button key={category} className={filter === category ? "active" : ""} onClick={() => setFilter(category)}>{category}</button>)}
           </div>
@@ -229,10 +279,10 @@ export default function App() {
         </section>
 
         <section className="section-pad split-section" id="experience">
-          <SectionTitle eyebrow="Experience" title="AI evaluation meets production engineering." copy="My work spans model-quality workflows and end-to-end product delivery." />
+          <SectionTitle eyebrow="Experience" title="Founder mindset meets AI evaluation and production engineering." copy="My work spans product ownership, model-quality workflows and end-to-end engineering delivery." />
           <div className="timeline">
             {experience.map((item) => (
-              <article key={`${item.company}-${item.role}`}>
+              <article key={`${item.company}-${item.role}`} className={item.highlight ? "experience-highlight" : ""}>
                 <div className="timeline-marker" />
                 <div className="timeline-head"><div><span>{item.company}</span><h3>{item.role}</h3></div><time>{item.period}</time></div>
                 <p>{item.text}</p>
@@ -260,8 +310,8 @@ export default function App() {
         <section className="contact section-pad" id="contact">
           <div>
             <span className="eyebrow">Start a conversation</span>
-            <h2>Have an AI, automation or full-stack problem worth solving?</h2>
-            <p>I'm open to engineering roles, AI evaluation work, consulting and product collaborations.</p>
+            <h2>Building something ambitious in AI, platforms or automation?</h2>
+            <p>I'm open to engineering roles, AI evaluation work, consulting, product collaborations and founder-to-founder conversations.</p>
           </div>
           <div className="contact-actions">
             <a className="primary-btn" href={`mailto:${profile.email}`}>Email me <HiOutlineMail /></a>
@@ -272,7 +322,7 @@ export default function App() {
 
       <footer>
         <div><span className="brand-mark">MA</span><span>Mustkeem Ahmad</span></div>
-        <p>AI Engineer · Full-Stack Developer · LLM Evaluation</p>
+        <p>Founder · AI Engineer · Full-Stack Developer</p>
         <div><a href={profile.github} target="_blank" rel="noreferrer"><FaGithub /></a><a href={`mailto:${profile.email}`}><HiOutlineMail /></a></div>
       </footer>
     </div>
