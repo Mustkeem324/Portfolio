@@ -1,10 +1,9 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaAws,
   FaGithub,
-  FaLinkedinIn,
   FaNodeJs,
   FaPython,
   FaReact,
@@ -17,14 +16,13 @@ import {
   SiPostgresql,
   SiTailwindcss,
 } from "react-icons/si";
-import { HiArrowUpRight, HiOutlineMail } from "react-icons/hi2";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { HiOutlineMail } from "react-icons/hi";
 
 const profile = {
-  name: "Mustkeem Ahmad",
   role: "AI Engineer · Generative AI · LLM Evaluation · Full-Stack Development",
   email: "mustkeem324@gmail.com",
   github: "https://github.com/Mustkeem324",
-  linkedin: "https://www.linkedin.com/",
   freelance: "https://freelancekar.com",
 };
 
